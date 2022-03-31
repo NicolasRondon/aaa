@@ -1,0 +1,26 @@
+mutation($name:String!, $notes: String!, $category: Int!) {
+  updateIngredient(name:$name, notes:$notes, category:$category) {
+  	ingredient {
+      name
+    }
+  }
+}
+
+{
+  "name": "nuevo2",
+  "notes": "nota",
+  "category": 1
+}
+
+=====
+        query
+query {
+  allIngredients {
+    id
+    name
+    notes
+    category {
+      name
+    }
+  }
+}
